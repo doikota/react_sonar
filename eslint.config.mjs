@@ -7,6 +7,7 @@ export default [
   { settings: { react: { version: 'detect' } } },
   { languageOptions: { parserOptions: { ecmaFeatures: { jsx: true } } } },
   { languageOptions: { globals: globals.browser } },
+  { rules: { 'react/jsx-boolean-value': ['error', 'always'] } },
   pluginJs.configs.recommended,
   pluginReactConfig,
 ];

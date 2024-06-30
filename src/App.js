@@ -14,6 +14,7 @@ const App = () => {
           Learn React
         </a>
         <div name="hoge"></div>
+        <div aria-hidden={true}></div>
       </header>
     </div>
   );
