@@ -13,7 +13,7 @@ const App = () => {
         <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
           Learn React
         </a>
-        <div name="hoge"></div>
+        <div name="hoge" name="hoge"></div>
         <div aria-hidden={true}></div>
       </header>
     </div>

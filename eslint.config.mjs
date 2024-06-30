@@ -1,14 +1,17 @@
 import globals from 'globals';
-import pluginJs from '@eslint/js';
-import pluginReactConfig from 'eslint-plugin-react/configs/recommended.js';
+import js from '@eslint/js';
+import recommended from 'eslint-plugin-react/configs/recommended.js';
 
 export default [
+  js.configs.recommended,
+  recommended,
   {
-    files: ['**/*.{js,mjs,cjs,jsx}'],
+    files: ['src/*.{js,mjs,cjs,jsx}'],
     settings: { react: { version: 'detect' } },
     languageOptions: { parserOptions: { ecmaFeatures: { jsx: true } }, globals: globals.browser },
     rules: { 'react/jsx-boolean-value': ['error', 'always'] },
   },
-  pluginJs.configs.recommended,
-  pluginReactConfig,
+  {
+    ignores: ['**/*.test.js'],
+  },
 ];
