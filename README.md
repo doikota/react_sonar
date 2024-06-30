@@ -13,9 +13,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 この React プロジェクトに以下コマンドにて eslint を追加導入しました。
 
-> eslint --init
-> You can also run this command directly using 'npm init @eslint/config'.
-> @eslint/create-config: v1.1.5
+#### eslint --init
+You can also run this command directly using 'npm init @eslint/config'.
+@eslint/create-config: v1.1.5
+
 #### √ How would you like to use ESLint? · problems
 #### √ What type of modules does your project use? · esm
 #### √ Which framework does your project use? · react
@@ -52,3 +53,6 @@ eslintにローカルルールを追加するには、eslint.config.mjsにrule�
 
 指定可能な各ルールについては、以下を参照。
 https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules
+
+
+
