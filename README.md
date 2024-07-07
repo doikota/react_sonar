@@ -11,22 +11,22 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### `npm run build`
 ### `npm run eject`
 
-この React プロジェクトに以下コマンドにて eslint を追加導入しました。
-
+この React プロジェクトに以下コマンドにてeslintのバージョン8.0.0を追加導入しました。
+※バージョンを8.0.0にしたのは、2024/07/07時点で文献が豊富な.eslintrc.jsonにて検証を行うため。
+#### npm install eslint@8.0.0
+#### eslint --version
+v8.0.0
 #### eslint --init
-You can also run this command directly using 'npm init @eslint/config'.
-@eslint/create-config: v1.1.5
-
-#### √ How would you like to use ESLint? · problems
-#### √ What type of modules does your project use? · esm
-#### √ Which framework does your project use? · react
-#### √ The React plugin doesn't officially support ESLint v9 yet. What would you like to do? · 8.x
-#### √ Does your project use TypeScript? · javascript
-#### √ Where does your code run? · browser
+#### √ How would you like to use ESLint? ・ problems
+#### √ What type of modules does your project use? ・ esm
+#### √ Which framework does your project use? ・ react
+#### √ Does your project use TypeScript? ・ No / Yes
+#### √ Where does your code run? ・ browser
+#### √ What format do you want your config file to be in? ・ JSON
 The config that you've selected requires the following dependencies:
-eslint@8.x, globals, @eslint/js, eslint-plugin-react
-#### √ Would you like to install them now? · No / Yes
-#### √ Which package manager do you want to use? · npm
+
+eslint-plugin-react@latest
+#### √ Would you like to install them now with npm? ・ No / Yes
 
 ### 注１）
 eslint実行時に、
@@ -37,17 +37,11 @@ error  'React' must be in scope when using JSX
 #### import React from 'react';
 
 ### 注２）
-eslint実行時に、
+eslintにローカルルールを追加するには、.eslintrc.jsonにruleとして以下の様に追加する。
 ```
-Warning: React version not specified in eslint-plugin-react settings. See https://github.com/jsx-eslint/eslint-plugin-react#configuration .
-```
-とWarningが出る場合、eslint.config.mjsに以下一行を追加する。
-#### { settings: { react: { version: 'detect' } } },
-
-### 注３）
-eslintにローカルルールを追加するには、eslint.config.mjsにruleとして以下の様に追加する。
-```
-{ rules: { 'react/jsx-boolean-value': ['error', 'always'] } },
+"rules": {
+  "linebreak-style": ["error", "windows"],
+}
 ```
 を追加する。
 
